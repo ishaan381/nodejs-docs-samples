@@ -45,7 +45,7 @@ function getTopicPolicy (topicName, callback) {
       return callback(err);
     }
 
-    console.log('Got policy:', policy);
+    console.log('Got topic policy:', policy);
     return callback(null, policy);
   });
 }
@@ -72,7 +72,7 @@ function getSubscriptionPolicy (subscriptionName, callback) {
       return callback(err);
     }
 
-    console.log('Got policy:', policy);
+    console.log('Got subscription policy:', policy);
     return callback(null, policy);
   });
 }
@@ -109,7 +109,7 @@ function setTopicPolicy (topicName, callback) {
       return callback(err);
     }
 
-    console.log('Updated policy for: %s', topicName);
+    console.log('Updated policy for topic: %s', topicName);
     return callback(null, policy);
   });
 }
@@ -145,7 +145,7 @@ function setSubscriptionPolicy (subscriptionName, callback) {
       return callback(err);
     }
 
-    console.log('Updated policy for: %s', subscriptionName);
+    console.log('Updated policy for subscription: %s', subscriptionName);
     return callback(null, policy);
   });
 }
@@ -178,7 +178,7 @@ function testTopicPermissions (topicName, callback) {
       return callback(err);
     }
 
-    console.log('Tested permissions for: %s', topicName);
+    console.log('Tested permissions for topic: %s', topicName);
     return callback(null, permissions);
   });
 }
@@ -210,7 +210,7 @@ function testSubscriptionPermissions (subscriptionName, callback) {
       return callback(err);
     }
 
-    console.log('Tested permissions for: %s', subscriptionName);
+    console.log('Tested permissions for subscription: %s', subscriptionName);
     return callback(null, permissions);
   });
 }

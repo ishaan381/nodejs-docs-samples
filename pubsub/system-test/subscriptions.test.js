@@ -72,12 +72,13 @@ describe('pubsub:subscriptions', function () {
   });
 
   describe('pull', function () {
+    var expected = 'Hello World!';
+
     before(function (done) {
-      pubsub.topic(topicName).publish({ data: 'Hello World!' }, done);
+      pubsub.topic(topicName).publish({ data: expected }, done);
     });
 
     it('should pull messages', function (done) {
-      var expected = 'Hello World!';
       program.pull(subscriptionName, function (err, messages) {
         assert.ifError(err);
         assert(Array.isArray(messages));

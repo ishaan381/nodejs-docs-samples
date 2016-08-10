@@ -61,7 +61,7 @@ describe('pubsub:iam', function () {
       sample.program.getTopicPolicy(topicName, function (err, policy) {
         assert.ifError(err);
         assert.equal(policy, policyMock);
-        assert(console.log.calledWith('Got policy:', policyMock));
+        assert(console.log.calledWith('Got topic policy:', policyMock));
       });
     });
     it('should require topicName', function () {
@@ -89,7 +89,7 @@ describe('pubsub:iam', function () {
       sample.program.getSubscriptionPolicy(subscriptionName, function (err, policy) {
         assert.ifError(err);
         assert.equal(policy, policyMock);
-        assert(console.log.calledWith('Got policy:', policyMock));
+        assert(console.log.calledWith('Got subscription policy:', policyMock));
       });
     });
     it('should require subscriptionName', function () {
@@ -117,7 +117,7 @@ describe('pubsub:iam', function () {
       sample.program.setTopicPolicy(topicName, function (err, policy) {
         assert.ifError(err);
         assert.equal(policy, policyMock);
-        assert(console.log.calledWith('Updated policy for: %s', topicName));
+        assert(console.log.calledWith('Updated policy for topic: %s', topicName));
       });
     });
     it('should require topicName', function () {
@@ -145,7 +145,7 @@ describe('pubsub:iam', function () {
       sample.program.setSubscriptionPolicy(subscriptionName, function (err, policy) {
         assert.ifError(err);
         assert.equal(policy, policyMock);
-        assert(console.log.calledWith('Updated policy for: %s', subscriptionName));
+        assert(console.log.calledWith('Updated policy for subscription: %s', subscriptionName));
       });
     });
     it('should require subscriptionName', function () {
@@ -173,7 +173,7 @@ describe('pubsub:iam', function () {
       sample.program.testTopicPermissions(topicName, function (err, permissions) {
         assert.ifError(err);
         assert.equal(permissions, permissionsMock);
-        assert(console.log.calledWith('Tested permissions for: %s', topicName));
+        assert(console.log.calledWith('Tested permissions for topic: %s', topicName));
       });
     });
     it('should require topicName', function () {
@@ -202,7 +202,7 @@ describe('pubsub:iam', function () {
       sample.program.testSubscriptionPermissions(subscriptionName, function (err, permissions) {
         assert.ifError(err);
         assert.equal(permissions, permissionsMock);
-        assert(console.log.calledWith('Tested permissions for: %s', subscriptionName));
+        assert(console.log.calledWith('Tested permissions for subscription: %s', subscriptionName));
       });
     });
     it('should require subscriptionName', function () {
